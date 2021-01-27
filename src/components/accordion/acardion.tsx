@@ -1,14 +1,19 @@
 import React from 'react';
+import AccordionBody from '../accordion-body/accordion-body';
+import AccordionTitle from '../accordion-title/accordion-title';
 
 const Accordion = () => {
   return (
-      <ul>
-        <li>Item-1</li>
-        <li>Item-1</li>
-        <li>Item-1</li>
-        <li>Item-1</li>
-        <li>Item-1</li>
-      </ul>
+      <>
+        <AccordionTitle/>
+        <ul>
+          <AccordionBody/>
+          <AccordionBody/>
+          <AccordionBody/>
+          <AccordionBody/>
+          <AccordionBody/>
+        </ul>
+      </>
   )
 }
 export default Accordion

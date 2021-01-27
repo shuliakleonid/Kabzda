@@ -1,14 +1,15 @@
 import React  from 'react';
+import Start from '../star/star';
 
 
 const Rating = () =>{
   return(
       <div>
-        <div>star</div>
-        <div>star</div>
-        <div>star</div>
-        <div>star</div>
-        <div>star</div>
+       <Start/>
+       <Start/>
+       <Start/>
+       <Start/>
+       <Start/>
       </div>
   )
 }
