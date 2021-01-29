@@ -2,31 +2,29 @@ import React from 'react';
 import AccordionBody from '../accordion-body/accordion-body';
 import AccordionTitle from '../accordion-title/accordion-title';
 
-type AccordionTypeProps = {
+type AccordionPropsType = {
   title: string
-  isBody: boolean
+  collapsed: boolean
 }
 
 
-const Accordion = (props: AccordionTypeProps) => {
-  if (props.isBody) {
-    return (<React.Fragment>
-      <AccordionTitle title={props.title}/>
-    </React.Fragment>)
-  } else {
+const Accordion = (props: AccordionPropsType) => {
+
+
+
     return (
         <React.Fragment>
           <AccordionTitle title={props.title}/>
-          <ul>
+          {!props.collapsed &&  <ul>
             <AccordionBody/>
             <AccordionBody/>
             <AccordionBody/>
             <AccordionBody/>
             <AccordionBody/>
-          </ul>
+          </ul>}
         </React.Fragment>
     )
-  }
+
 
 
 }
