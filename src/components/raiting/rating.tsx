@@ -1,8 +1,11 @@
 import React from 'react';
 import Start from '../star/star';
 
+type RatingTypeProps ={
+  value:number
+}
 
-const Rating = (props: any) => {
+const Rating = (props: RatingTypeProps) => {
   if (props.value === 0) {
     return (
         <div><Start selected={false}/>
