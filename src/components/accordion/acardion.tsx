@@ -4,7 +4,7 @@ import AccordionTitle from '../accordion-title/accordion-title';
 
 const Accordion = () => {
   return (
-      <>
+      <React.Fragment>
         <AccordionTitle/>
         <ul>
           <AccordionBody/>
@@ -13,7 +13,7 @@ const Accordion = () => {
           <AccordionBody/>
           <AccordionBody/>
         </ul>
-      </>
+      </React.Fragment>
   )
 }
 export default Accordion
