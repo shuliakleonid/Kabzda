@@ -1,15 +1,13 @@
 import React from 'react';
 
 type StarPropsType = {
-  selected:boolean
+  selected: boolean
+  setValue?: ()=>void
 }
 
-const Start = (props:StarPropsType) => {
-  if(props.selected ) {
-    return (<span><b>star</b> </span>)
-  }else{
-    return (<span>star </span>)
-  }
+const Start = (props: StarPropsType) => {
+  return <span onClick={props.setValue}>
+    {props.selected ? <b>star </b> : 'star '}
+          </span>
 }
-
 export default Start;

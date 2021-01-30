@@ -5,6 +5,7 @@ import AccordionTitle from '../accordion-title/accordion-title';
 type AccordionPropsType = {
   title: string
   collapsed: boolean
+  onChange:()=> void
 }
 
 
@@ -14,7 +15,7 @@ const Accordion = (props: AccordionPropsType) => {
 
     return (
         <React.Fragment>
-          <AccordionTitle title={props.title}/>
+          <AccordionTitle change={ props.onChange} title={props.title}  />
           {!props.collapsed &&  <ul>
             <AccordionBody/>
             <AccordionBody/>
