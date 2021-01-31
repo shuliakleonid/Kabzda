@@ -1,7 +1,7 @@
 import React from 'react';
 import Start from '../star/star';
 
-type RatingPropsType = {
+export type RatingPropsType = {
   value: number
 
 }
