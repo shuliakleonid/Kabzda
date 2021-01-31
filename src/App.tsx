@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Accordion from './components/accordion/acardion';
-import OnOff from './components/on-off/on-off';
+import {Accordion} from './components/accordion/acardion';
+import {OnOff} from './components/on-off/on-off';
 
 function App() {
   let [collapsed, setCollapsed] = useState(false)

@@ -3,6 +3,7 @@ import Start from '../star/star';
 
 type RatingPropsType = {
   value: number
+
 }
 
 const Rating = (props: RatingPropsType) => {

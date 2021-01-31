@@ -9,7 +9,7 @@ type AccordionPropsType = {
 }
 
 
-const Accordion = (props: AccordionPropsType) => {
+export const Accordion = (props: AccordionPropsType) => {
 
 
 
@@ -29,4 +29,4 @@ const Accordion = (props: AccordionPropsType) => {
 
 
 }
-export default Accordion
+
