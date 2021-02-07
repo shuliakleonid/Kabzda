@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Accordion} from './components/accordion/acardion';
 import {OnOff} from './components/on-off/on-off';
+import Select from './components/select/select';
 
 function App() {
   let [collapsed, setCollapsed] = useState(false)
@@ -14,7 +15,8 @@ function App() {
   return (
       <div>
         <OnOff on={collapsed} onChange={changeCollapsed}/>
-        <Accordion title={'Hello'} collapsed={collapsed} onChange={changeCollapsed}/>
+        <Accordion title={'Hello'} collapsed={collapsed} onChange={changeCollapsed} items={[]} onClick={(i)=>{
+          console.log(i)}}/>
         {/*<UncontrolledRating/>*/}
         {/*<Accordion title={'Accordion Title'} collapsed={true}/>*/}
         {/*/!*<Accordion title={'Menu'} collapsed={false} />*!/*/}
