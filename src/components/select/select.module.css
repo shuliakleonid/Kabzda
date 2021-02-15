@@ -1,0 +1,17 @@
+.select {
+    border: 1px solid grey;
+    width: 30%;
+}
+
+.items {
+    border: 1px solid black;
+}
+.title{
+    margin: 0;
+}
+/*.items:hover{*/
+/*    background-color: red;*/
+/*}*/
+.selected{
+    background-color: green;
+}
