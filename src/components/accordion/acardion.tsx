@@ -20,7 +20,7 @@ export const Accordion = (props: AccordionPropsType) => {
   return (
       <React.Fragment>
         <AccordionTitle change={props.onChange} title={props.title}/>
-        {!props.collapsed && <AccordionBody items={props.items} onClick={props.onClick} />}
+        {props.collapsed && <AccordionBody items={props.items} onClick={props.onClick} />}
           </React.Fragment>
           )
 

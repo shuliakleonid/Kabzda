@@ -1,22 +1,25 @@
-import React, {useState} from 'react';
+import React, {useReducer, useState} from 'react';
 import {Accordion} from './components/accordion/acardion';
 import {OnOff} from './components/on-off/on-off';
+import {reducer} from './reducer/reducer';
 import Select from './components/select/select';
-
 function App() {
-  let [collapsed, setCollapsed] = useState(false)
+  // let [collapsed, setCollapsed] = useState(false)
+  const [collapsed, dispatch] = useReducer(reducer,{collapsed:false})
+  console.log(collapsed.collapsed)
   const changeCollapsed = () => {
-    setCollapsed(!collapsed)
+    dispatch({type:'TOGGLE-COLLAPSED'})
   }
-  let [on,setOn]= useState(false)
-  const clickCircle = () => {
-    setOn(!on)
-  }
+  // let [on,setOn]= useState(false)
+  // const clickCircle = () => {
+  //   setOn(!on)
+  // }
   return (
       <div>
-        <OnOff on={collapsed} onChange={changeCollapsed}/>
-        <Accordion title={'Hello'} collapsed={collapsed} onChange={changeCollapsed} items={[]} onClick={(i)=>{
-          console.log(i)}}/>
+        <OnOff on={collapsed.collapsed} onChange={changeCollapsed}/>
+        <Accordion title={'Hello'} collapsed={collapsed.collapsed} onChange={changeCollapsed} items={[]} onClick={(i) => {
+          console.log(i)
+        }}/>
         {/*<UncontrolledRating/>*/}
         {/*<Accordion title={'Accordion Title'} collapsed={true}/>*/}
         {/*/!*<Accordion title={'Menu'} collapsed={false} />*!/*/}
