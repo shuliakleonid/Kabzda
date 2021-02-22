@@ -6,7 +6,6 @@ import Select from './components/select/select';
 function App() {
   // let [collapsed, setCollapsed] = useState(false)
   const [collapsed, dispatch] = useReducer(reducer,{collapsed:false})
-  console.log(collapsed.collapsed)
   const changeCollapsed = () => {
     dispatch({type:'TOGGLE-COLLAPSED'})
   }
