@@ -1,25 +1,31 @@
-import React, {useState} from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
+import React, {ChangeEvent, useMemo, useState} from 'react';
 import {Meta, Story} from '@storybook/react/types-6-0';
-import Select, {SelectPropsType} from '../../components/select/select';
 import {action} from '@storybook/addon-actions';
-
+import Select, {SelectPropsType} from '../components/select/select';
 
 export default {
-  title: 'Select stories',
-  component: Select,
-
+  title: 'SelectWithMemo Demo ',
 } as Meta;
+
 
 const item = [
   {title: 'Pet', value: 1},
   {title: 'Dom', value: 2},
   {title: 'Strong', value: 3}
 ]
-
 const callback = action('accordion mode change event fired')
 
-const Template: Story<SelectPropsType> = (args) => <Select {...args} />;
+const Template: Story<SelectPropsType> = (args) => {
+
+  return(<>
+  <Select {...args} />
+  <hr/>
+  <Select {...args} />
+  <hr/>
+  <Select {...args} />
+  </>)
+}
+
 export const SelectedName = Template.bind({});
 
 SelectedName.args = {
@@ -27,4 +33,3 @@ SelectedName.args = {
   onChange: callback,
   items: item
 };
-
